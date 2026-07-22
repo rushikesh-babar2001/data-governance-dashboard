@@ -381,13 +381,18 @@ Example
 ```
 screenshots/
 
-dashboard.png
+dashboard.png<img width="1920" height="1830" alt="dashboard" src="https://github.com/user-attachments/assets/088a0fd6-f922-480d-9f57-853c8fb3fc48" />
 
-upload.png
+
+
+upload.png![Uploading upload.png…]()<img width="1920" height="1600" alt="dataset_details" src="https://github.com/user-attachments/assets/7cb942e6-b2f8-4317-9372-16e2a655c81e" />
+
+
 
 dataset-details.png
 
-charts.png
+<img width="1920" height="1600" alt="dataset_details" src="https://github.com/user-attachments/assets/b3c5b1d5-55f8-4092-b4bb-7d4c09ad4e97" />
+
 ```
 
 ---
