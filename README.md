@@ -407,14 +407,13 @@ Example
 
 ### Upload Dataset
 
-![Upload](screenshots/upload.png)
+![Upload Dataset](screenshots/upload.png)
 
 ---
 
 ### Dataset Details
 
 ![Dataset Details](screenshots/dataset-details.png)
-```
 
 ---
 
