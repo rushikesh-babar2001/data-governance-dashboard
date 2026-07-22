@@ -1,8 +1,33 @@
 # 📊 Data Governance Dashboard
 
+![Java](https://img.shields.io/badge/Java-17-orange)
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-brightgreen)
+
+![React](https://img.shields.io/badge/React-19-blue)
+
+![MySQL](https://img.shields.io/badge/MySQL-8-blue)
+
+![License](https://img.shields.io/badge/License-MIT-green)
+
+
 A full-stack Data Governance Dashboard built using **Spring Boot**, **React.js**, and **MySQL** that allows users to upload datasets, perform automatic profiling, classify sensitive data, and visualize governance metrics through an interactive dashboard.
 
 ---
+
+
+## ⭐ Project Highlights
+
+- Upload CSV datasets
+- Automatic column profiling
+- Missing and invalid value detection
+- Data type inference
+- Sensitive data classification
+- Quality, Trust and Value score calculation
+- Interactive analytics dashboard
+- Search and delete datasets
+- Manual sensitivity override
+- Responsive React UI
 
 ## 🚀 Features
 
@@ -372,27 +397,23 @@ Example
 
 ---
 
-# 📷 Screenshots
+## 📷 Screenshots
 
-Add screenshots here.
+### Dashboard
 
-Example
+![Dashboard](screenshots/dashboard.png)
 
-```
-screenshots/
+---
 
-dashboard.png<img width="1920" height="1830" alt="dashboard" src="https://github.com/user-attachments/assets/088a0fd6-f922-480d-9f57-853c8fb3fc48" />
+### Upload Dataset
 
+![Upload](screenshots/upload.png)
 
+---
 
-upload.png![Uploading upload.png…]()<img width="1920" height="1600" alt="dataset_details" src="https://github.com/user-attachments/assets/7cb942e6-b2f8-4317-9372-16e2a655c81e" />
+### Dataset Details
 
-
-
-dataset-details.png
-
-<img width="1920" height="1600" alt="dataset_details" src="https://github.com/user-attachments/assets/b3c5b1d5-55f8-4092-b4bb-7d4c09ad4e97" />
-
+![Dataset Details](screenshots/dataset-details.png)
 ```
 
 ---
@@ -411,12 +432,11 @@ dataset-details.png
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
-**Rushikesh Babar**
+Rushikesh Babar
 
-GitHub
+Java Full Stack Developer
 
+GitHub:
 https://github.com/rushikesh-babar2001
-
----
