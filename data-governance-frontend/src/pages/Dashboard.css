@@ -1,0 +1,30 @@
+.card {
+    transition: all 0.3s ease;
+    border-radius: 16px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.badge {
+    font-size: 0.85rem;
+}
+
+.btn {
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
