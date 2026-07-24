@@ -1,7 +1,6 @@
 package com.proteccio.data_governance_backend.service.impl;
 
 import com.proteccio.data_governance_backend.dto.DashboardResponse;
-import com.proteccio.data_governance_backend.exception.ResourceNotFoundException;
 import com.proteccio.data_governance_backend.repository.DatasetRepository;
 import com.proteccio.data_governance_backend.service.DashboardService;
 import org.springframework.stereotype.Service;
@@ -20,17 +19,13 @@ public class DashboardServiceImpl implements DashboardService {
 
         long totalDatasets = datasetRepository.count();
 
-        if (totalDatasets == 0) {
-            throw new ResourceNotFoundException("No datasets available.");
-        }
-
         return DashboardResponse.builder()
                 .totalDatasets(totalDatasets)
-                .totalRows(datasetRepository.getTotalRows())
-                .totalColumns(datasetRepository.getTotalColumns())
-                .averageQuality(datasetRepository.getAverageQuality())
-                .averageTrust(datasetRepository.getAverageTrust())
-                .averageValue(datasetRepository.getAverageValue())
+                .totalRows(totalDatasets == 0 ? 0 : datasetRepository.getTotalRows())
+                .totalColumns(totalDatasets == 0 ? 0 : datasetRepository.getTotalColumns())
+                .averageQuality(totalDatasets == 0 ? 0.0 : datasetRepository.getAverageQuality())
+                .averageTrust(totalDatasets == 0 ? 0.0 : datasetRepository.getAverageTrust())
+                .averageValue(totalDatasets == 0 ? 0.0 : datasetRepository.getAverageValue())
                 .build();
     }
 }
