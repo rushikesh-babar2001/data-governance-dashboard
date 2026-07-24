@@ -1,43 +1,21 @@
 package com.proteccio.data_governance_backend.config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-
-import java.util.List;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class CorsConfig {
+public class CorsConfig implements WebMvcConfigurer {
 
-    @Bean
-    public CorsFilter corsFilter() {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
 
-        CorsConfiguration config = new CorsConfiguration();
-
-        config.setAllowedOrigins(List.of(
-                "https://data-governance-dashboard-phi.vercel.app",
-                "http://localhost:5173"
-        ));
-
-        config.setAllowedMethods(List.of(
-                "GET",
-                "POST",
-                "PUT",
-                "DELETE",
-                "OPTIONS"
-        ));
-
-        config.setAllowedHeaders(List.of("*"));
-
-        config.setAllowCredentials(true);
-
-        UrlBasedCorsConfigurationSource source =
-                new UrlBasedCorsConfigurationSource();
-
-        source.registerCorsConfiguration("/**", config);
-
-        return new CorsFilter(source);
+        registry.addMapping("/**")
+                .allowedOrigins(
+                        "https://data-governance-dashboard-phi.vercel.app",
+                        "http://localhost:5173"
+                )
+                .allowedMethods("*")
+                .allowedHeaders("*");
     }
 }

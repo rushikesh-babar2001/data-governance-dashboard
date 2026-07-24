@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/datasets")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://data-governance-dashboard-phi.vercel.app")
 public class DatasetController {
 
     private final DatasetService datasetService;
