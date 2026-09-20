@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/dashboard")
 @CrossOrigin(origins = "https://data-governance-dashboard-phi.vercel.app")
 public class DashboardController {
-
+   //CI/CD deployment test
     private final DashboardService dashboardService;
 
     public DashboardController(DashboardService dashboardService) {
