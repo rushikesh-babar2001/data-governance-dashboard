@@ -1,0 +1,42 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: data-governance-mysql-container
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: data_governance
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./data-governance-backend
+    image: data-governance-backend:latest
+    container_name: data-governance-backend-container
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      MYSQLHOST: mysql
+      MYSQLPORT: 3306
+      MYSQLDATABASE: data_governance
+      MYSQLUSER: root
+      MYSQLPASSWORD: root
+    depends_on:
+      - mysql
+
+  frontend:
+    build:
+      context: ./data-governance-frontend
+    image: data-governance-frontend:latest
+    container_name: data-governance-frontend-container
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql-data:
