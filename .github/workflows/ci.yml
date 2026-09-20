@@ -26,4 +26,5 @@ jobs:
           cache: maven
 
       - name: Build with Maven
+        working-directory: data-governance-backend
         run: mvn -B clean package -DskipTests
