@@ -11,11 +11,12 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
 
         registry.addMapping("/**")
-                .allowedOrigins(
-                        "https://data-governance-dashboard-phi.vercel.app",
-                        "http://localhost:5173",
-                        "http://localhost:3000"
-                )
+        .allowedOrigins(
+        	    "https://data-governance-dashboard-phi.vercel.app",
+        	    "http://localhost:5173",
+        	    "http://localhost:3000",
+        	    "http://65.0.7.47"
+        	)
                 .allowedMethods("*")
                 .allowedHeaders("*");
     }
