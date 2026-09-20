@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CI + Docker Build
 
 on:
   push:
@@ -28,3 +28,7 @@ jobs:
       - name: Build with Maven
         working-directory: data-governance-backend
         run: mvn -B clean package -DskipTests
+
+      - name: Build Docker image
+        working-directory: data-governance-backend
+        run: docker build -t data-governance-backend:latest .
